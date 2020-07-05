@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: hzaabnodejsdockerexample 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hzaabnodejsdockerexample 
+    spec:
+      containers:
+        - name: hzaabnodejsdockerexample 
+          image: keplertraining.azurecr.io/hzaabnodejsdockerexample
+          ports:
+          - containerPort: 80
